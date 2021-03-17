@@ -1,3 +1,4 @@
+/* 
 .App {
   text-align: center;
 }
@@ -14,14 +15,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+}
+
+.App-header h1 {
+  font-size: 6rem;
+  font-family: 'Amatic SC', cursive;
 }
 
 .App-link {
@@ -36,3 +41,68 @@
     transform: rotate(360deg);
   }
 }
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(dirt.svg) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('mole.svg') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+button {
+  margin: 20px;
+  background-color: #F2385A;
+  font-size: 3rem;
+  border: none;
+  position: relative;
+  top: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 15px 0px 0px #f02046;
+  color: white;
+  transition: all 0.2s;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  top: 58px; 
+  border: none;
+  background-color: darken(#F2385A, 20%);
+  box-shadow: 0px 7px 0px 0px #f02046;
+} */
