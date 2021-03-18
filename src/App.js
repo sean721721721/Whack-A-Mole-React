@@ -16,6 +16,8 @@ const setStart = (boolean) => {
   return { type: 'SET_START', start: boolean }
 }
 
+let timeout;
+
 function App() {
   const { score, holeIndex, start }= useSelector(state => state);
   // console.log({ score, holeIndex, start })
@@ -72,18 +74,15 @@ function App() {
   }
 
   useEffect(() => {
-    let timeout;
-    let peepDuration;
-    if (start) {
+    if (start && holeIndex === -1) {
       timeout = setTimeout(() => {
         console.log("time's up");
         dispatch(setStart(false));
-      }, 5000);
-
+      }, 10000);
       peep();
-    
     } 
-    return () => clearTimeout(timeout);
+    else if (start) peep();
+    else clearTimeout(timeout);
   }, [holeIndex, start]);
   
   return (

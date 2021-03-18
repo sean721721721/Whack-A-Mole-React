@@ -2,7 +2,7 @@ import { createStore } from 'redux';
 
 const INITIAL_STATE = {
   score: 0,
-  holeIndex: 0,
+  holeIndex: -1,
   start: false,
 }
 
