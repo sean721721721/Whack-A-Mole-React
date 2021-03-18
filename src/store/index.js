@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 const INITIAL_STATE = {
   score: 0,
   holeIndex: 0,
+  start: false,
 }
 
 function tasks(state = INITIAL_STATE, action) {
@@ -19,6 +20,12 @@ function tasks(state = INITIAL_STATE, action) {
 		return {
 			...state,
 			holeIndex: action.holeIndex
+        }
+
+    case 'SET_START':
+        return {
+            ...state,
+			start: action.start
         }
 
     case 'SET_INITIAL_STATE':

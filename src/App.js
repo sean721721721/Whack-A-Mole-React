@@ -12,20 +12,27 @@ const setLastHoleIndex = (holeIndex) => {
   return { type: 'SET_HOLE_INDEX', holeIndex }
 }
 
+const setStart = (boolean) => {
+  return { type: 'SET_START', boolean }
+}
+
 let timeup = true;
-console.log(timeup);
+let timeout;
+// console.log(timeup);
 
 function App() {
-  const { score, holeIndex }= useSelector(state => state);
-  console.log({ score, holeIndex })
+  const { score, holeIndex, start }= useSelector(state => state);
+  console.log({ score, holeIndex, start })
   const holeCount = 6;
-  let timeout;
+  // let timeup = true;
+  console.log('time up: ', timeup);
   const dispatch = useDispatch();
-  console.log(timeup);
+  // console.log(timeup);
   
   let holes = [useRef(),useRef(),useRef(),useRef(),useRef(),useRef()];
   // let holes = useRef([]);
   // holes.current = [...Array(holeCount).fill()];
+  let buttonRef = useRef(null);
 
   const randomTime = (min, max) => {
     const time = Math.random() * (max - min) + min;
@@ -43,50 +50,50 @@ function App() {
 
   const peep = () => {
     console.log('peep!');
+    console.log(timeup);
     const time = randomTime(200, 1000);
     const index = randomHole(holes);
     const hole = holes[index].current;
     hole.classList.add('up');
-    dispatch(setLastHoleIndex(holeIndex));
-    console.log('set hole index completed')
+    dispatch(setLastHoleIndex(index));
     setTimeout(() => {
       hole.classList.remove('up');
-      console.log('timeUp in peep(): ', timeup);
       if (!timeup) peep();
     }, time);
   }
   const handleClick = (e) => {
     let text = e.target.textContent;
-    if (text === 'Start!') {
-      e.target.textContent = "Stop!";
+    if (text === 'START!') {
+      e.target.textContent = "STOP!";
       startGame();
+      console.log('after start game')
     } else {
-      console.log('stop!')
-      e.target.textContent = "Start!";
+      e.target.textContent = "START!";
       stopGame();
     }
 
   }
   const startGame = () => {
     console.log('start!')
-    console.log('set init');
     dispatch(setStateToInit());
     timeup = false;
     peep();
     timeout = setTimeout(() => {
       console.log("time's up");
-      timeup = true
-    }, 10000);
+      dispatch(setStart(false));
+      timeup = true;
+    }, 5000);
   }
 
   const stopGame = () => {
     console.log('stop!');
     timeup = true;
-    clearTimeout(timeout);
   }
 
   useEffect(() => {
-    console.log('userEffect');
+    console.log('useEffect');
+    buttonRef.current.textContent = timeup ? "START!" : "STOP";
+
   })
 
   return (
@@ -99,7 +106,7 @@ function App() {
             <Hole ref={holes[index]} index={index} />
           )}
         </div>
-        <button onClick={handleClick}>{timeup ? "Start!" : "Stop!"}</button>
+        <button ref={buttonRef} onClick={handleClick}>{timeup ? "START!" : "STOP!"}</button>
       </div>
   );
 }
