@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Score from './Score';
 import Hole from './Hole';
+import Timer from './Timer';
 import './App.scss';
 
 const setStateToInit = () => {
@@ -19,9 +20,11 @@ const setStart = (boolean) => {
 let timeout;
 
 function App() {
+  console.log('App');
   const { score, holeIndex, start }= useSelector(state => state);
-  // console.log({ score, holeIndex, start })
+  console.log({ score, holeIndex, start })
   const holeCount = 6;
+  const totalSeconds = 10;
   const dispatch = useDispatch();
   
   let holes = [useRef(),useRef(),useRef(),useRef(),useRef(),useRef()];
@@ -75,10 +78,10 @@ function App() {
 
   useEffect(() => {
     if (start && holeIndex === -1) {
-      timeout = setTimeout(() => {
-        console.log("time's up");
-        dispatch(setStart(false));
-      }, 10000);
+    //   timeout = setTimeout(() => {
+    //     console.log("time's up");
+    //     dispatch(setStart(false));
+    //   }, totalSeconds * 1000);
       peep();
     } 
     else if (start) peep();
@@ -90,6 +93,9 @@ function App() {
         <header className="App-header">
           <h1>WHACK A MOLE! <Score score={score} /></h1>
         </header>
+        <div className="timer">
+          {start ? <Timer time={totalSeconds}/> : ''}
+        </div>
         <div className="game">
           {Array(holeCount).fill('').map((hole, index) => 
             <Hole ref={holes[index]} index={index} />

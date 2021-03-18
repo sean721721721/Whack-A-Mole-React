@@ -28,6 +28,9 @@
   .App-header h1 {
     font-size: 6rem;
     font-family: 'Amatic SC', cursive;
+    color: whitesmoke;
+    margin: 30px auto;
+    text-shadow: 5px 5px black;
   }
   
   .App-link {
@@ -43,6 +46,16 @@
     }
   }
   
+  div.timer{
+    width: 50px;
+    height: 100px;
+    font-size: 6rem;
+    font-family: 'Amatic SC', cursive;
+    margin: 10px auto;
+    font-weight: bold;
+    text-shadow: 1px 1px white;
+  }
+
   .game {
     width: 600px;
     height: 400px;
@@ -84,10 +97,10 @@
   }
   
   button {
+    border: 1px solid darken(#5F5F5F, 20%);
     margin: 20px;
     background-color: #5F5F5F;
     font-size: 3rem;
-    border: none;
     position: relative;
     top: 50px;
     border-radius: 10px;
@@ -103,7 +116,6 @@
   
   button:active {
     top: 58px; 
-    border: none;
     box-shadow: 0px 7px 0px 0px darken(#5F5F5F, 10%);
   }
   
