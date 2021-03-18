@@ -29,7 +29,10 @@ function tasks(state = INITIAL_STATE, action) {
         }
 
     case 'SET_INITIAL_STATE':
-        return INITIAL_STATE;
+        return {
+            ...INITIAL_STATE,
+            start: true,
+        };
 	default:
 		return state;
   }
