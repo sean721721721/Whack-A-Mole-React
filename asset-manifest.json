@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Whack-A-Mole-React/static/css/main.91e7153c.chunk.css",
+    "main.css": "/Whack-A-Mole-React/static/css/main.215aa7b5.chunk.css",
     "main.js": "/Whack-A-Mole-React/static/js/main.265bfc84.chunk.js",
     "main.js.map": "/Whack-A-Mole-React/static/js/main.265bfc84.chunk.js.map",
     "runtime-main.js": "/Whack-A-Mole-React/static/js/runtime-main.72344247.js",
@@ -10,7 +10,7 @@
     "static/js/3.da1e7b5d.chunk.js": "/Whack-A-Mole-React/static/js/3.da1e7b5d.chunk.js",
     "static/js/3.da1e7b5d.chunk.js.map": "/Whack-A-Mole-React/static/js/3.da1e7b5d.chunk.js.map",
     "index.html": "/Whack-A-Mole-React/index.html",
-    "static/css/main.91e7153c.chunk.css.map": "/Whack-A-Mole-React/static/css/main.91e7153c.chunk.css.map",
+    "static/css/main.215aa7b5.chunk.css.map": "/Whack-A-Mole-React/static/css/main.215aa7b5.chunk.css.map",
     "static/js/2.38a02757.chunk.js.LICENSE.txt": "/Whack-A-Mole-React/static/js/2.38a02757.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/Whack-A-Mole-React/static/media/mole.3f8caf26.svg",
     "static/media/index.css": "/Whack-A-Mole-React/static/media/mud.eeb69ace.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.72344247.js",
     "static/js/2.38a02757.chunk.js",
-    "static/css/main.91e7153c.chunk.css",
+    "static/css/main.215aa7b5.chunk.css",
     "static/js/main.265bfc84.chunk.js"
   ]
 }
