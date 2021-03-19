@@ -24,7 +24,6 @@ const Header = () => {
         <div className="App-header">
             <ul>
                 <li className="logo" onClick={handleClick}>WHACK A MOLE!</li>
-                <li>Sign in</li>
                 <li onClick={handleClick}>LEADERBOARD</li>
             </ul>
         </div>

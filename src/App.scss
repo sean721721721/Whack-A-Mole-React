@@ -45,6 +45,11 @@ body,
   align-items: center;
 }
 
+.App-header ul::before {
+  content: '';
+  flex: 1;
+}
+
 .App-header li {
   flex: 1;
 }
