@@ -8,20 +8,16 @@ const setStart = (boolean) => {
 
 const Timer = (props) => {
     const { time } = props;
-    console.log('Timer time=', time);
     const [ secondsLeft, setTimeLeft] = useState(time);
-    const start = useSelector(state => state.start);
+    const { start, score } = useSelector(state => state);
     const dispatch = useDispatch();
-    console.log('secondsLeft: ', secondsLeft)
     useEffect(() => {
-        // console.log('secondsLeft: ', secondsLeft);
         if (!secondsLeft) {
+            document.querySelector('.name-input-div').classList.toggle('active');
             dispatch(setStart(false));
             return;
         }
-        console.log('useEffect');
         let countDown = setTimeout(() => {
-            // console.log('secondsLeft in setInterval: ', secondsLeft);
             setTimeLeft(secondsLeft => secondsLeft - 1);
         }, 1000);
         return () => clearInterval(countDown);
