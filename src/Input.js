@@ -15,6 +15,7 @@ const Input = () => {
         const userDatas = JSON.parse(localStorage.getItem('userData')) || [];
         userDatas.push({ id, score });
         localStorage.setItem('userData', JSON.stringify(userDatas));
+        
         e.target.reset();
         document.querySelector('.name-input-div').classList.toggle('active');
         dispatch(setStart(false));
@@ -25,8 +26,7 @@ const Input = () => {
         <div className="name-input-div">
             <span>Your Name</span>
             <form onSubmit={handleSubmit}>
-                <input type="text"></input>
-                <input type="submit"></input>
+                <input type="text"/>
             </form>
         </div>
     )

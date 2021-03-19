@@ -231,6 +231,9 @@ button:active {
   padding: 20px;
   border-radius: 15px;
   z-index: 5;
+  font-family: monospace;
+  font-size: 2rem;
+  box-shadow: 7px 7px 7px 0px darken(#5F5F5F, 10%);
 }
 
 .name-input-div.active {
@@ -246,6 +249,9 @@ button:active {
   width: 200px;
   height: 30px;
   margin-top: 10px;
+  font-family: monospace;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .name-input-div input[type="submit"] {
