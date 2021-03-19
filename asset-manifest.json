@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Whack-A-Mole-React/static/css/main.d4c35375.chunk.css",
-    "main.js": "/Whack-A-Mole-React/static/js/main.250fb83e.chunk.js",
-    "main.js.map": "/Whack-A-Mole-React/static/js/main.250fb83e.chunk.js.map",
-    "runtime-main.js": "/Whack-A-Mole-React/static/js/runtime-main.f3d613d9.js",
-    "runtime-main.js.map": "/Whack-A-Mole-React/static/js/runtime-main.f3d613d9.js.map",
-    "static/js/2.8ea3fa17.chunk.js": "/Whack-A-Mole-React/static/js/2.8ea3fa17.chunk.js",
-    "static/js/2.8ea3fa17.chunk.js.map": "/Whack-A-Mole-React/static/js/2.8ea3fa17.chunk.js.map",
-    "static/js/3.27f74921.chunk.js": "/Whack-A-Mole-React/static/js/3.27f74921.chunk.js",
-    "static/js/3.27f74921.chunk.js.map": "/Whack-A-Mole-React/static/js/3.27f74921.chunk.js.map",
+    "main.css": "/Whack-A-Mole-React/static/css/main.db889d04.chunk.css",
+    "main.js": "/Whack-A-Mole-React/static/js/main.4e70f0e0.chunk.js",
+    "main.js.map": "/Whack-A-Mole-React/static/js/main.4e70f0e0.chunk.js.map",
+    "runtime-main.js": "/Whack-A-Mole-React/static/js/runtime-main.2aba5298.js",
+    "runtime-main.js.map": "/Whack-A-Mole-React/static/js/runtime-main.2aba5298.js.map",
+    "static/js/2.20348a7d.chunk.js": "/Whack-A-Mole-React/static/js/2.20348a7d.chunk.js",
+    "static/js/2.20348a7d.chunk.js.map": "/Whack-A-Mole-React/static/js/2.20348a7d.chunk.js.map",
+    "static/js/3.71b94014.chunk.js": "/Whack-A-Mole-React/static/js/3.71b94014.chunk.js",
+    "static/js/3.71b94014.chunk.js.map": "/Whack-A-Mole-React/static/js/3.71b94014.chunk.js.map",
     "index.html": "/Whack-A-Mole-React/index.html",
-    "static/css/main.d4c35375.chunk.css.map": "/Whack-A-Mole-React/static/css/main.d4c35375.chunk.css.map",
-    "static/js/2.8ea3fa17.chunk.js.LICENSE.txt": "/Whack-A-Mole-React/static/js/2.8ea3fa17.chunk.js.LICENSE.txt",
+    "static/css/main.db889d04.chunk.css.map": "/Whack-A-Mole-React/static/css/main.db889d04.chunk.css.map",
+    "static/js/2.20348a7d.chunk.js.LICENSE.txt": "/Whack-A-Mole-React/static/js/2.20348a7d.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/Whack-A-Mole-React/static/media/mole.3f8caf26.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3d613d9.js",
-    "static/js/2.8ea3fa17.chunk.js",
-    "static/css/main.d4c35375.chunk.css",
-    "static/js/main.250fb83e.chunk.js"
+    "static/js/runtime-main.2aba5298.js",
+    "static/js/2.20348a7d.chunk.js",
+    "static/css/main.db889d04.chunk.css",
+    "static/js/main.4e70f0e0.chunk.js"
   ]
 }
